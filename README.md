@@ -1,0 +1,26 @@
+8 Tiles Game. 
+this is A game where you have a 3X3 board with 8 tiles in it with the number 1 to 8 
+and 1 space. you need to move the tiles such that you will have the space in the upper left corner 
+and the number 1 to 8 will be organized by asecnding order. 
+
+to solve this puzzle I use 4 search algorithmes. 
+2 uninformed and 2 informed. 
+
+1. BFS - basic BFS to search the tree until fingind the solution if exsits. 
+2. IDDFS - its a basic DFS algorithem with and itertive deepning to prevent infinte running by defulat the max depth is 20. 
+3. GBFS - simiilar to BFS but it will chose the next move by a heuristic function. 
+4. A* - this is simillar to GBFS but it will calcualte the price by cost to node and the heurstic to the goal. 
+
+heuristic function: linear conflicts. 
+this is an expanstion to the manhattan distance function 
+by adding to the mannhatan distance 2 for each two tiles if conflict 
+2 tile in conflict if they are in thier right line but in reverse order 
+since it will cost as more then 2 move to switch the places we get a hurestic 
+which is admissable and consistant. 
+
+data structers: 
+
+1. 2D array - the most natural way to represnt a board. 
+2. priorty queue (pq) - most algorithmes will use a pq to determine the next node to be evaluted. 
+3. Hash set - Hash set to prevent 2 states searched twice. 
+4. Queue - save the nodes of next layer 
